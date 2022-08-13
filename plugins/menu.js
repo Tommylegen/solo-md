@@ -35,7 +35,8 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-Multi Device | Official Bot Account
+*Multi Device* | *Patrick-Md*
+
 ❏ Username : *%name*
 ❏ Limit : *%limit* Limit
 ❏ Role : *%role*
