@@ -13,7 +13,7 @@ Berapapun donasi kalian akan sangat berarti 👍
 𝐀𝐫𝐢𝐠𝐚𝐭𝐨𝐮!!!
 
 Contact person Owner:
-wa.me/6285828357727 (Owner)`
+wa.me/6289505054287 (Owner)`
 let message = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/file/696076406bf2516adb1fd.jpg' }}, { upload: conn.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
@@ -23,20 +23,20 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/fil
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '🏧 Sociabuzz',
-               url: 'https://sociabuzz.com/arietube/tribe'
+               displayText: 'Saweria',
+               url: 'https://saweria.co/Rajaaja'
              }
 
            },
                {
              callButton: {
-               displayText: 'Gopay',
-               phoneNumber: '+62 882-4500-9287'
+               displayText: 'Dana',
+               phoneNumber: '+62 895-0505-4287'
              }
            },           
                {
              quickReplyButton: {
-               displayText: '🧒 Owner',
+               displayText: 'Owner',
                id: '.owner',
              }
 
