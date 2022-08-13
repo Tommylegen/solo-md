@@ -1,10 +1,12 @@
-let handler = async m => m.reply(`
-            𝒃𝒐𝒕 𝒊𝒏𝒊 𝒎𝒆𝒏𝒈𝒈𝒖𝒏𝒂𝒌𝒂𝒏 𝑺𝑪 𝒅𝒊𝒔𝒊𝒏𝒊 https://youtube.com/channel/UCxVf6aARpoMp8w6vh9MKARQ
-`.trim()) //
+let handler = async (m, { conn }) => {
+let ye = `@${m.sender.split`@`[0]}`
+let esce = `
+Hai ${ye} Bot Ini Tidak open source :)
+`
+conn.sendBut(m.chat, esce, wm, 'Thanks', 'thanks', m) 
+}
+handler.help = ['sc', 'sourcecode']
+handler.tags = ['info']
+handler.command = /^(sc|sourcecode)$/i
 
-handler.customPrefix = /^(.sc|.script|sc|script)$/i
-handler.command = new RegExp
-
-handler.limit = false
-handler.mods = false 
 module.exports = handler
