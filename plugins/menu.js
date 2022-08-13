@@ -4,66 +4,61 @@ let path = require('path')
 let moment = require('moment-timezone')
 let levelling = require('../lib/levelling')
 let tags = {
-  'rpgabsen': '𝐑𝐏𝐆-𝐀𝐁𝐒𝐄𝐍',
-  'rpg': '𝐑𝐏𝐆',
-  'game': '𝐆𝐀𝐌𝐄',
-  'xp': '𝐄𝐗𝐏, 𝐋𝐈𝐌𝐈𝐓',
-  'asupan': '𝐀𝐒𝐔𝐏𝐀𝐍',
-  'sticker': '𝐒𝐓𝐈𝐊𝐄𝐑',
-  'main': '𝐌𝐀𝐈𝐍',
-  'kerang': '𝐊𝐄𝐑𝐀𝐍𝐆 𝐀𝐉𝐀𝐈𝐁',
-  'quotes': '𝐐𝐔𝐎𝐓𝐄𝐒',
-  'admin': '𝐀𝐃𝐌𝐈𝐍',
-  'group': '𝐆𝐑𝐔𝐏',
-  'internet': '𝐈𝐍𝐓𝐄𝐑𝐍𝐄𝐓',
-  'anonymous': '𝐀𝐍𝐎𝐍𝐘𝐌𝐎𝐔𝐒 𝐂𝐇𝐀𝐓',
-  'downloader': '𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑',
-  'berita': '𝐁𝐄𝐑𝐈𝐓𝐀',
-  'tools': '𝐓𝐎𝐎𝐋𝐒',
-  'fun': '𝐅𝐔𝐍',
-  'database': '𝐃𝐀𝐓𝐀𝐁𝐀𝐒𝐄', 
-  'vote': '𝐕𝐎𝐓𝐈𝐍𝐆',
-  'absen': '𝐀𝐁𝐒𝐄𝐍',
-  'catatan': '𝐂𝐀𝐓𝐀𝐓𝐀𝐍',
-  'jadian': '𝐉𝐀𝐃𝐈𝐀𝐍',
-  'islami': '𝐈𝐒𝐋𝐀𝐌𝐈',
-  'owner': '𝐎𝐖𝐍𝐄𝐑',
-  'virtex': '𝗩𝗜𝗥𝗧𝗘𝗫',
-  'info': '𝐈𝐍𝐅𝐎',
-  'audio': '𝐀𝐔𝐃𝐈𝐎',
-  'maker': '𝐌𝐀𝐊𝐄𝐑',
+  'rpgabsen': 'RPG ABSEN',
+  'rpg': 'RPG',
+  'game': 'GAMES',
+  'xp': 'EXP & LIMIT',
+  'asupan': 'ASUPAN',
+  'sticker': 'STICKER',
+  'main': 'MAIN',
+  'kerang': 'KERANG',
+  'quotes': 'QUOTES',
+  'admin': 'ADMIN',
+  'group': 'MENU GROUP',
+  'internet': 'INTERNET',
+  'anonymous': 'ANONYMOUS',
+  'downloader': 'DOWNLOAD',
+  'berita': 'BERITA',
+  'tools': 'TOOLS',
+  'fun': 'FUN',
+  'database': 'DATABASE', 
+  'vote': 'VOTE',
+  'absen': 'ABSEN',
+  'catatan': 'CATATAN',
+  'jadian': 'PACARAN',
+  'islami': 'ISLAMI',
+  'owner': 'MENU OWNER',
+  'virtex': 'VIRTEX',
+  'info': 'INFO BOT',
+  'audio': 'AUDIO',
+  'maker': 'MAKER',
 }
 const defaultMenu = {
   before: `
-╔═══╗ ♪
-║███║ ♫.        🅼🅴🅽🆄 🅱︎🅾︎🆃
-║ (●) ♫.       🅱︎🆈 🅰︎🆁🅸🅴🆃🆄🅱︎🅴▶️
-╚═══╝♪♪
-❂═══❖•ೋ•:･ﾟ✧:･ﾟ✧
-╟ꂑ 𝐻𝑎𝑖, %ucapan %name! 👋
-┗━━━•❅•°•❈
-╔╦══• •✠•❀彡★
-╟⌛*𝐖𝐀𝐊𝐓𝐔:* 
-╟🕐%wib WIB
-╟🕔%wita WITA
-╟🕒%wit WIT
-╟🌄*𝐇𝐚𝐫𝐢:* %week
-╟📅*𝐓𝐚𝐧𝐠𝐠𝐚𝐥:* %date
-╟🕔*𝐔𝐩𝐭𝐢𝐦𝐞:* %uptime (%muptime)
-╟👨‍👨‍👧‍👧*𝐒𝐚𝐫𝐚𝐧𝐠𝐁𝐨𝐭:*
-╟https://chat.whatsapp.com/Dj8kMyI48u6KGbaAQtKi70
-╚»★★ミ✧･ﾟ: ✧ﾟ･:
+Multi Device | Official Bot Account
+❏ Username : *%name*
+❏ Limit : *%limit* Limit
+❏ Role : *%role*
+❏ Level : *%level (%exp / %maxexp)*
+❏ Total XP : *%totalexp* XP
 
+❏ Uptime : *%uptime*
+❏ Tanggal Islam: *%dateIslamic*
+❏ Hari : %week %weton
+❏ Waktu: %time
+❏ Tanggal: %date
+❏ Library : Baileys Multi Device
+❏ Prefix Used : [ %p ]
+❏ Database : %rtotalreg dari %totalreg 
+❏ Group : https://bit.ly/3duUQvp
 
-📊*𝐋𝐢𝐦𝐢𝐭𝐦𝐮:* %limit
-📶*𝐋𝐞𝐯𝐞𝐥𝐦𝐮:* %level
-🏋️‍♀️*𝐄𝐱𝐩𝐦𝐮:* %exp
+Hello *%name* , Here my command list.
 %readmore`.trimStart(),
-  header: '⃝▣──「 %category 」───⬣',
+  header: '⃝▣──「 %category 」───',
   body: '│ ○ %cmd %islimit %isPremium',
-  footer: '▣────────────⬣\n',
+  footer: '▣────────────\n',
   after: `*Recode by*
-*%npmname* | %version
+*Rajadev* | %version
 ${'```%npmdesc```'}
 `,
 }
@@ -181,35 +176,35 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '✏️ S̺͆o̺͆u̺͆r̺͆c̺͆e̺͆ C̺͆o̺͆d̺͆e̺͆',
-               url: 'https://youtu.be/J0KmlEwLIVc'
+               displayText: '✏️ Script',
+               url: 'https://youtube.com/channel/UCxVf6aARpoMp8w6vh9MKARQ'
              }
 
            },
              {
              callButton: {
-               displayText: 'H̺͆p̺͆ O̺͆w̺͆n̺͆e̺͆r̺͆',
-               PhoneNumber: '0858-2835-7727'
+               displayText: 'Telepon',
+               PhoneNumber: '0895-0505-4287'
              }
 
            },
                {
              quickReplyButton: {
-               displayText: '👤 O̺͆w̺͆n̺͆e̺͆r̺͆',
+               displayText: '👤 Owner',
                id: '.owner',
              }
 
            },
                {
              quickReplyButton: {
-               displayText: '🤝 D̺͆o̺͆n̺͆a̺͆s̺͆i̺͆',
+               displayText: '🤝 Donasi',
                id: '.donasi',
              }
 
            },
            {
              quickReplyButton: {
-               displayText: '📳S̺͆e̺͆w̺͆a̺͆ B̺͆o̺͆t̺͆',
+               displayText: '📳Sewa Bot',
                id: '.sc',
              }
            }]
