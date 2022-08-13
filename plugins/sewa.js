@@ -5,7 +5,7 @@ let sewa = `*────── 「 LIST SEWA 」 ──────*
 Hai 👋
 𝐈𝐧𝐢 𝐥𝐢𝐬𝐭 𝐬𝐞𝐰𝐚 𝐤𝐚𝐦𝐢 𝐬𝐢𝐥𝐚𝐡𝐤𝐚𝐧 𝐝𝐢𝐩𝐢𝐥𝐢𝐡
 
-┏━━━•❅•°•❈〔 𝐋𝐢𝐬𝐭 𝐒𝐞𝐰𝐚 〕
+┏━━━•❅•°•❈〔 HARGA 〕
 ┣★ミ Premium : 10k/Bulan
 ┣★ミ Premium : 15k/2bulan
 ┣★ミ Sewabot + running : 10k/bulan
@@ -14,13 +14,13 @@ Hai 👋
 ┣➲ Scan Barcod Qrisnya diatas🤗
 ┗━━━•❅•°•❈
 
-┏━━━•❅•°•❈𝐊𝐞𝐮𝐧𝐭𝐮𝐧𝐠𝐚𝐧 𝐌𝐞𝐦𝐛𝐞𝐫 𝐏𝐫𝐞𝐦𝐢𝐮𝐦
+┏━━━•❅•°•❈KEUNTUNG
 ┣➲ Unlock Fitur Premium
 ┣➲ limit didapat tiap hari dengan claim
 ┣➲ bisa invite bot ke grup
 ┗━━━•❅•°•❈
 Contact person Owner:
-wa.me/6285828357727 (Owner)`
+wa.me/6289505054287 (Owner)`
 let message = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/file/696076406bf2516adb1fd.jpg' }}, { upload: conn.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
@@ -30,20 +30,20 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/fil
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '🏧 Sociabuzz',
-               url: 'https://sociabuzz.com/arietube/shop'
+               displayText: 'Saweria',
+               url: 'https://saweria.co/Rajaaja'
              }
 
            },
                {
              callButton: {
-               displayText: 'Gopay',
-               phoneNumber: '+62 882-4500-9287'
+               displayText: 'Dana',
+               phoneNumber: '+62 895-0505-4287'
              }
            },           
                {
              quickReplyButton: {
-               displayText: '🧒 Owner',
+               displayText: 'Owner',
                id: '.owner',
              }
 
